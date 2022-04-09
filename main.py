@@ -9,6 +9,7 @@ from api import api as keys
 from telegram.ext import *
 import alpha_bot as alpha
 
+print("Welcome to Alpha Telegram Bot")
 print("Alpha bot started...!")
 
 def start(update, context):

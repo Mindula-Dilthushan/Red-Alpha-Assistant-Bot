@@ -3,8 +3,44 @@
 # Email     : minduladilthushan1@gmail.com
 # Date      : 22/04/09
 
-def project(project_name):
-    print(f'Hi, {project_name}')
+# import ---------------------------------------------------------------------------------
+
+from api import api as keys
+from telegram.ext import *
+import alpha_bot as alpha
+
+print("Alpha bot started...!")
+
+def start(update, context):
+    update.message.reply_text("Type something! I can help you")
+
+def help(update, context):
+        update.message.reply_text("If you need help? what you need to know ?")
+
+def handle(update, context):
+    handle_text = str(update.message.text).lower()
+    handle_response = alpha.basic_messages(handle_text)
+
+    update.message.reply_text(handle_response)
+
+def error(update, context):
+    print(f"Update {update} caused error {context.error}")
+
+
+def main():
+
+    updater = Updater(keys.API_KEY, use_context=True)
+    dispatcher = updater.dispatcher
+
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(CommandHandler("help", help))
+
+    dispatcher.add_handler(MessageHandler(Filters.text, handle))
+
+    dispatcher.add_error_handler(error)
+
+    updater.start_polling()
+    updater.idle()
 
 if __name__ == '__main__':
-    project('This is Red Alpha Assistant Bot Project')
+    main()

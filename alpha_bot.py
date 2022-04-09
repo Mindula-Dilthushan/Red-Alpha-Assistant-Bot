@@ -15,8 +15,13 @@ def basic_messages(input_text):
         return "My name is alpha.\nI am Red Alpha's Assistant,\n*Drop your message here,I can help you"
 
     if message in ("time", "time?", "time ?"):
-        data = datetime.now()
-        date_time = data.strftime("%d/%m/%y, %H:%M:%S")
-        return str(date_time)
+        time = datetime.now()
+        time = time.strftime("Time is : %H:%M")
+        return str(time)
+
+    if message in ("date", "date?", "date ?"):
+        date = datetime.now()
+        date = date.strftime("Today is : %d/%m/%y")
+        return str(date)
 
     return "I don't understand you, please tell me again"

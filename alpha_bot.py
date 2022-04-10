@@ -6,6 +6,7 @@
 
 from datetime import datetime
 
+
 def bot_messages(input_text):
     message = str(input_text).lower()
 
@@ -37,18 +38,19 @@ def bot_messages(input_text):
         return "Bye bye 🤗\nHave a wonderful or great day ✨"
 
     if message in ("alpha", "red alpha", "redalpha"):
-        return "Yes, I am stay 😉 you want help ? yes or no ?"
-    elif message in ("yes", "yess"):
-        return "What help do you need ?"
-    elif message in ("no", "noo"):
-        return "ok ✌"
+        return "Yes, I am stay 😉 you want help ?"
 
     # Details Bot ------------------------------------------------------------------------------------------------------
+    if message in ("how old are you", "how old are you?", "how old are you ?"):
+        return "2 Days 😁"
+
+    if message in ("where you from", "where you from?", "where you from ?"):
+        return "I am from Sri Lanka"
+
+    if message in ("help", "help?", "i need help"):
+        return "ok tell me your problem "
 
 
-
-
-
-
-
-    return "I don't understand you 🤨 please tell me again 🙃"
+    return "I don't understand you 🤨 please tell me again 🙃 or contact my creator\n" \
+           "Email : minduladilthushan1@gmail.com\n" \
+           "Mobile Number : 0741900680"

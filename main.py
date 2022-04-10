@@ -1,7 +1,8 @@
-# Project   : Red Alpha Assistant Bot
-# Author    : Mindula Dilthushan
-# Email     : minduladilthushan1@gmail.com
-# Date      : 22/04/09
+# Project       : Red Alpha Assistant Bot
+# Author        : Mindula Dilthushan
+# Email         : minduladilthushan1@gmail.com
+# Crate Date    : 22/04/09
+# Update Date   : 22/04/10
 
 # import ---------------------------------------------------------------------------------
 
@@ -20,7 +21,7 @@ def help(update, context):
 
 def handle(update, context):
     handle_text = str(update.message.text).lower()
-    handle_response = alpha.basic_messages(handle_text)
+    handle_response = alpha.bot_messages(handle_text)
 
     update.message.reply_text(handle_response)
 

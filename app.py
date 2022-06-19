@@ -13,11 +13,14 @@ import alpha_bot as alpha
 print("Welcome to Alpha Telegram Bot")
 print("Alpha bot started...!")
 
+
 def start(update, context):
     update.message.reply_text("Type something! I can help you")
 
+
 def help(update, context):
-        update.message.reply_text("If you need help? what you need to know ?")
+    update.message.reply_text("If you need help? what you need to know ?")
+
 
 def handle(update, context):
     handle_text = str(update.message.text).lower()
@@ -25,12 +28,12 @@ def handle(update, context):
 
     update.message.reply_text(handle_response)
 
+
 def error(update, context):
     print(f"Update {update} caused error {context.error}")
 
 
 def main():
-
     updater = Updater(keys.API_KEY, use_context=True)
     dispatcher = updater.dispatcher
 
@@ -44,5 +47,5 @@ def main():
     updater.start_polling()
     updater.idle()
 
-if __name__ == '__main__':
-    main()
+
+main()

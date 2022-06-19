@@ -1,0 +1,1 @@
+worker: gunicorn wsgi.py

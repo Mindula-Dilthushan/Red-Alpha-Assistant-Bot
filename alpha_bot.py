@@ -37,7 +37,7 @@ def bot_messages(input_text):
     if message in ("bye", "bye bye", "see you"):
         return "Bye bye 🤗\nHave a wonderful or great day ✨"
 
-    if message in ("alpha", "red alpha", "redalpha"):
+    if message in ("alpha", "red alpha", "redalpha", "red alpha?", "red alpha ?"):
         return "Yes, I am stay 😉 you want help ?"
 
     # Details Bot ------------------------------------------------------------------------------------------------------
@@ -49,7 +49,6 @@ def bot_messages(input_text):
 
     if message in ("help", "help?", "i need help"):
         return "ok tell me your problem "
-
 
     return "I don't understand you 🤨 please tell me again 🙃 or contact my creator\n" \
            "Email : minduladilthushan1@gmail.com\n" \

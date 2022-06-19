@@ -1,1 +1,1 @@
-worker: python3 wsgi.py
+web: python wsgi.py runserver 0.0.0.0:5000

@@ -1,1 +1,1 @@
-worker: python3 wsgi.py
+worker: python wsgi.py

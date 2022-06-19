@@ -1,1 +1,1 @@
-web: python wsgi.py runserver 0.0.0.0:5000
+worker: gunicorn wsgi.py
